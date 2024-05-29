@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardConrtoller;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -22,4 +23,6 @@ Route::get('/salam/{nama}', function ($nama) {
 });
 
 Route::get('admin/dashboard', [DashboardConrtoller::class, 'index']);
-  
+
+// Route untuk menampilkan student
+Route::get('admin/student', [StudentController::class, 'index']);
